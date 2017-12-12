@@ -19,7 +19,7 @@ let change_speed = false
 let change_time = true
 
 var speedup = 5
-var runners_fraction = 5
+var runners_fraction = 3
 
 document.getElementById("gender").addEventListener("click", function(){
     gender_classifier = true;
@@ -126,5 +126,6 @@ function time_slider_change(new_runners_datastep) {
 
 function fraction_slider_change(new_runners_fraction) {
   runners_fraction = parseFloat(new_runners_fraction);
+  change_time = true; change_speed = false;
   draw_runners();
 }

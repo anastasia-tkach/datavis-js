@@ -106,12 +106,12 @@ function animate_map() {
   if (runners_datastep < 75)
     document.getElementById("time_slider").value = runners_datastep;
   circles.attr("distance", function() {
-    //if (+d3.select(this).attr("distance") > 1500) { timer.stop() }
     let runner = d3.select(this)
     var t = runner.attr("t")
     if (change_speed == true) {
       var shift = speedup * marathon_distance/(t + 1)
       return + runner.attr("distance") + shift
+      change_speed = false
     }
     if (change_time == true) {
       var d =  runners_datastep * speedup * marathon_distance/(t + 1)
