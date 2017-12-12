@@ -1,0 +1,119 @@
+<head>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.0.0/d3.js"></script>
+<script src="https://d3js.org/d3-selection-multi.v1.min.js"></script>
+<script src="https://d3js.org/d3.v4.js"></script>
+<link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+<div id="classifiers">
+<label class="container">
+	<font face="verdana" color="black">Gender</font>
+  <input id="gender" type="radio" name="classifier" value="gender">
+  <span class="checkmark"></span>
+</label>
+<label class="container">
+	<font face="verdana" color="black">Age</font>
+  <input id="age" type="radio" name="classifier" value="age">
+  <span class="checkmark"></span>
+</label>
+<label class="container">
+	<font face="verdana" color="black">Experience</font>
+  <input id="experience" type="radio" name="classifier" value="experience"  checked="checked">
+  <span class="checkmark"></span>
+</label>
+</div>
+
+<div id="gender_filters">
+<label class="container">
+	<font face="verdana" color="black">Females & Males</font>
+  <input id="females_and_males" type="radio" name="gender_filter" value="females_and_males" checked="checked" >
+  <span class="checkmark"></span>
+</label>
+<label class="container">
+	<font face="verdana" color="black">Females Only</font>
+  <input id="females_only" type="radio" name="gender_filter" value="females_only">
+  <span class="checkmark"></span>
+</label>
+<label class="container">
+	<font face="verdana" color="black">Males Only</font>
+  <input id="males_only" type="radio" name="gender_filter" value="males_only">
+  <span class="checkmark"></span>
+</label>
+</div>
+
+<div id="age_filters">
+<label class="container">
+	<font face="verdana" color="black">All Ages</font>
+  <input id="ages_all" type="radio" name="age_filter" value="ages_all" checked="checked" >
+  <span class="checkmark"></span>
+</label>
+<label class="container">
+	<font face="verdana" color="black">7 - 20</font>
+  <input id="ages_7_20" type="radio" name="age_filter" value="ages_7_20" >
+  <span class="checkmark"></span>
+</label>
+<label class="container">
+	<font face="verdana" color="black">20 - 33</font>
+  <input id="ages_20_33" type="radio" name="age_filter" value="ages_20_33">
+  <span class="checkmark"></span>
+</label>
+<label class="container">
+	<font face="verdana" color="black">33 - 47</font>
+  <input id="ages_33_47" type="radio" name="age_filter" value="ages_33_47">
+  <span class="checkmark"></span>
+</label>
+<label class="container">
+	<font face="verdana" color="black">47 - 60</font>
+  <input id="ages_47_60" type="radio" name="age_filter" value="ages_47_60">
+  <span class="checkmark"></span>
+</label>
+<label class="container">
+	<font face="verdana" color="black">> 60</font>
+  <input id="ages_60_" type="radio" name="age_filter" value="ages_60_">
+  <span class="checkmark"></span>
+</label>
+</div>
+
+<div id="experience_filters">
+<label class="container">
+	<font face="verdana" color="black">All Experiences</font>
+  <input id="count_all" type="radio" name="experience_filter" value="count_all" checked="checked">
+  <span class="checkmark"></span>
+</label>
+<label class="container">
+	<font face="verdana" color="black">1 run</font>
+  <input id="count_1" type="radio" name="experience_filter" value="count_1" >
+  <span class="checkmark"></span>
+</label>
+<label class="container">
+	<font face="verdana" color="black">2-3 runs</font>
+  <input id="count_2_5" type="radio" name="experience_filter" value="count_2_5">
+  <span class="checkmark"></span>
+</label>
+<label class="container">
+	<font face="verdana" color="black">> 3 runs</font>
+  <input id="count_6" type="radio" name="experience_filter" value="count_6">
+  <span class="checkmark"></span>
+</label>
+</div>
+
+<div id="slidecontainer">
+	<font face="verdana" color="black">Speed</font>
+  <input type="range" min="0" max="20" value="5" class="slider" id="speed_slider" onchange="speed_slider_change(this.value)">
+  <font face="verdana" color="black">Time</font>
+	<input type="range" min="0" max="70" value="0" class="slider" id="time_slider" onchange="time_slider_change(this.value)">
+	<font face="verdana" color="black">Fraction</font>
+	<input type="range" min="0" max="100" value="5" class="slider" id="fraction_slider" onchange="fraction_slider_change(this.value)">
+
+</div>
+
+<div id="image">
+	<script type="text/javascript" src='filters.js'></script>
+	<script type="text/javascript" src='track.js'></script>
+	<script type="text/javascript" src='histogram.js'></script>
+	<script type="text/javascript" src='main.js'></script>
+</div>
+
+
+</body>
